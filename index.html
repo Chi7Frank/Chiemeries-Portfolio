@@ -4,16 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chiemerie's Portfolio</title>
-
-    <style link="style/"></style>
+    
+    <!-- ICON CDN -->
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
+    
+    <!-- STYLESHEET -->
+    <style rel="stylesheet"></style>
 </head>
 <body>
     <header>
-        <nav></nav>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/">
+                  <img src="" alt="Chiemerie's Logo">
+                </a>
+             </div>
+                
+                <ul class="nav-links">
+                    <li><a href="#hero-section">
+                        About Me
+                    </a></li>
+                    <li><a href="#projects-section">
+                        Projects
+                    </a></li>
+                    <li><a href="#skills-section">
+                        Skillsets
+                    </a></li>
+                    <li><a href="#certification-sections">
+                        Certifications
+                    </a></li>
+                    <li><a href="#story-section">
+                        My Story
+                    </a></li>
+                    <li><a href="#contact-section">
+                        Contact Me
+                    </a></li>
+                </ul>
+        </nav>
     </header>
 
     <main class="main-body">
-        <section class="hero-section">
+        <section div="hero-section" class="hero-section">
             <h2 class="section-title">About Me</h2>
             <div class="hero-img-block">
                 <img src="" alt="My Picture" class="hero-img">
@@ -30,7 +61,7 @@
             </div>
         </section>
 
-        <section class="projects-sections">
+        <section id="projects-section" class="projects-section">
             <h2 class="section-title">My Projects</h2>
 
             <div class="projects-card-container grid">
@@ -76,7 +107,7 @@
             </div>
         </section>
 
-        <section class="skills-section">
+        <section id="skills-section" class="skills-section">
              <h2 class="section-title">My Skillset</h2>
             <div class="skills-container grid">
 
@@ -106,7 +137,7 @@
             </div>
         </section>
 
-        <section class="certifications-section">
+        <section id="certification-sections" class="certifications-section">
              <h2 class="section-title">My certificates & Certifications</h2>
 
              <div class="carousel flexbox">
@@ -132,7 +163,7 @@
             </div>
         </section>
 
-        <section class="story-section">
+        <section id="story-section" class="story-section">
             <h2 class="section-title">My Story</h2>
 
             <a href="" download="Chiemerie Obinwa's Resume">Download My Resume</a>
@@ -153,31 +184,47 @@
             </div>
         </section>
 
-        <section class="contact-section">
+        <section id="contact-section" class="contact-section">
               <h2 class="section-title">Contact Me</h2>
 
               <form action="">
-                <h3 class="form-title title-3">Send Me A Mail</h3>
+    <h3 class="form-title title-3">Send Me A Mail</h3>
 
-                <input name="senderName" type="text" placeholder="FirstName MiddleName, LastName"/>
-                <label for="senderName">Your FlilName</label>
-                
-                <input name="senderEmail" type="email" placeholder="johndoe@gmail.com"/>
-                <label for="senderEmail">Your Email</label>
+    <label for="senderName">Your Full Name</label>
+    <input id="senderName" name="senderName" type="text" placeholder="FirstName MiddleName, LastName"/>
 
-                <input type="text" placeholder="Hi Chiemerie, so I was thinking....."/>
-                <button>Submit</button>
-              </form>
+    <label for="senderEmail">Your Email</label>
+    <input id="senderEmail" name="senderEmail" type="email" placeholder="johndoe@gmail.com"/>
+
+    <label for="senderMessage">Your Message</label>
+    <textarea id="senderMessage" name="senderMessage" placeholder="Hi Chiemerie, so I was thinking....."></textarea>
+
+    <button type="submit">Submit</button>
+</form>
 
               <div class="connect">
                  <h3 class="connect-title title-3">Or connect with me</h3>
                  <div class="flexbox">
-                    <span class="flex-object">Github</span>
-                    <span class="flex-object">LinkedIn</span>
+                    <span class="flex-object">
+                     <i class="devicon-github-original"></i>
+                     </span>
+          
+                    <span class="flex-object">
+                    <i class="devicon-linkedin-plain"></i>
+                    </span>
+                    
                     <span class="flex-object">Discord</span>
-                    <span class="flex-object">Twitter</span>
-                    <span class="flex-object">Facebook</span>
+                    
+                    <span class="flex-object">
+                    <i class="devicon-twitter-original"></i>
+                    </span>
+                    
+                    <span class="flex-object">
+                     <i class="devicon-facebook-plain"></i>
+                    </span>
+                    
                     <span class="flex-object">SubStack</span>
+                    
                     <span class="flex-object">WhatsApp</span>
                  </div>
               </div>
@@ -361,6 +408,9 @@
         </div>
     </aside>
 
-    <footer></footer>
+    <footer>
+    <p>&copy; 2026 Chiemerie Obinwa. All rights reserved.</p>
+    <a href="#">Back to top &uarr;</a>
+</footer>
 </body>
 </html>
