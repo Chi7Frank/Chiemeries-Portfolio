@@ -1,29 +1,34 @@
 /* ===== Header / Navbar ===== */
 header {
     background-color: var(--color-teal-pale-2);
+    transition: box-shadow 0.2s ease;
+    border-bottom: 1px solid var(--color-teal-pale);
+    box-shadow: 0 1px 8px rgba(15, 61, 62, 0.06);
+}
+
+/* ===== Sticky Header (scrolled state) ===== */
+.header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    
+    background-color: rgba(195, 225, 225, 0.25);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow: 0 2px 20px rgba(0, 128, 128, 0.12);
+    border-bottom-color: rgba(195, 225, 225, 0.5);
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     height: var(--header-height);
     padding: 0 2rem;
-
-    border-bottom: 1px solid var(--color-teal-pale);
-    box-shadow: 0 1px 8px rgba(15, 61, 62, 0.06);
-
-    transition: box-shadow 0.2s ease;
-}
-
-/* Optional: deepen shadow once user scrolls (needs a JS-added class later, e.g. .scrolled) */
-.navbar.scrolled {
-    box-shadow: 0 2px 14px rgba(15, 61, 62, 0.14);
 }
 
 /* ===== Logo ===== */
@@ -89,34 +94,32 @@ header {
 
 /* ============ Hero Section ============= */
 .hero-section {
-    display: grid;
-    grid-template-columns: 1fr 1.2fr;
-    grid-template-areas:
-        "img title"
-        "img text";
-    align-items: center;
-    column-gap: 3rem;
-    row-gap: 1rem;
-
     max-width: 1200px;
     margin: 0 auto;
-    padding: 5rem 2rem;
-    min-height: calc(100vh - var(--header-height));
-    background-color: var(--color-teal-pale-2);
+    padding: 3rem 2rem;
+    background-color: var(--color-teal-pale-2);    
 }
 
 .hero-section .section-title {
-    grid-area: title;
     font-size: 1rem;
     font-weight: 600;
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: var(--color-teal);
     align-self: end;
+    margin-bottom: 2rem;
+}
+
+.hero-grid{
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;            
+    align-items: center;
+    column-gap: 3rem;
+    row-gap: 1rem;
+    margin-top: 2rem;
 }
 
 .hero-img-block {
-    grid-area: img;
     display: flex;
     justify-content: center;
 }
@@ -126,13 +129,9 @@ header {
     max-width: 380px;
     aspect-ratio: 1 / 1;
     object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid var(--color-teal-dark);
+    border-radius: 20%;
+    bord4r: 3px solid var(--color-teal-dark);
     box-shadow: 0 12px 32px rgba(0, 128, 128, 0.18);
-}
-
-.hero-txt-block {
-    grid-area: text;
 }
 
 .hero-intro {
@@ -348,9 +347,6 @@ header {
 
 /* ===== Certifications Section ===== */
 .certifications-section {
-    padding: 5rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
     border-top: 3px solid var(--color-teal-pale-2);
     border-bottom: 3px solid var(--color-teal-pale-2);
 }
@@ -386,12 +382,13 @@ header {
     background-color: var(--color-white);
     border: 1px solid var(--color-teal-pale-2);
     border-radius: 16px;
-    padding: 2rem;
+    min-height: 420px;
+    padding: 2.5rem;
 }
 
 .carousel-img-block img {
     width: 100%;
-    height: 320px;
+    height: 400px;
     object-fit: cover;
     border-radius: 12px;
 }
@@ -463,4 +460,406 @@ header {
 
 .carousel-dot.active {
     background-color: var(--color-teal);
+}
+
+/* ===== Story Section ===== */
+.story-section {
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.story-section .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin-bottom: 1.5rem;
+}
+
+/* ===== My Story Grid ===== */
+.my-story {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.story-txt-block {
+    order: 1;
+}
+
+.story-img-block {
+    order: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.story-text {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: var(--color-black);
+    text-align: justify;
+    margin-bottom: 5rem;
+    
+}
+
+.story-img {
+    width: 100%;
+    max-width: 420px;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 16px;
+    border: 4px solid var(--color-teal-pale-2);
+    box-shadow: 0 12px 32px rgba(0, 128, 128, 0.16);
+}
+
+/* ===== Resume Button ===== */
+.resume-download{
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 3rem;
+
+    background-color: var(--color-teal);
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.resume-download:hover {
+    background-color: var(--color-teal-dark);
+    transform: translateY(-2px);
+}
+
+.resume-download:active {
+    transform: translateY(0);
+}
+/* ===== Contact Section — dark CTA treatment ===== */
+.contact-section {
+    padding: 6rem 2rem;
+    background-color: var(--color-teal-dark-2);
+}
+
+.contact-section .section-title {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-gold-light);
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+/* ===== Layout: form + connect side by side, centered as a unit ===== */
+.contact-section {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: start;
+    gap: 3rem;
+
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.contact-section .section-title {
+    grid-column: 1 / -1; /* title spans full width above both columns */
+}
+
+/* ===== Form Card ===== */
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    padding: 2.75rem;
+
+    background-color: var(--color-white);
+    border-radius: 18px;
+    box-shadow: 0 20px 50px rgba(212, 162, 76, 0.40);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+.contact-section form label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-teal-dark-2);
+    margin-bottom: -0.75rem;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-size: 0.95rem;
+    color: var(--color-black);
+    background-color: var(--color-white);
+    border: 1.5px solid var(--color-teal-pale-2);
+    border-radius: 8px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-section form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.contact-section form input::placeholder,
+.contact-section form textarea::placeholder {
+    color: var(--color-teal-light);
+    opacity: 0.7;
+}
+
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+    outline: none;
+    border-color: var(--color-teal);
+    box-shadow: 0 0 0 4px rgba(0, 128, 128, 0.18);
+}
+
+/* ===== Submit — bold, gold accent for max contrast against the dark section ===== */
+.contact-section form button {
+    align-self: stretch;
+
+    padding: 1rem 2.5rem;
+    margin-top: 0.5rem;
+
+    background-color: var(--color-gold);
+    color: var(--color-teal-dark-2);
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: centre;
+
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-section form button:hover {
+    background-color: var(--color-gold-light);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(212, 162, 76, 0.35);
+}
+
+.contact-section form button:active {
+    transform: translateY(0);
+}
+
+/* ===== Connect block — sits beside the form, on the dark background ===== */
+.connect {
+    padding-top: 1rem;
+}
+
+.connect-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+}
+
+.connect .flexbox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.connect .flex-object {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    padding: 0.75rem 1.1rem;
+
+    background-color: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    color: var(--color-white);
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.connect .flex-object:hover {
+    background-color: rgba(212, 162, 76, 0.15);
+    border-color: var(--color-gold);
+    transform: translateY(-3px);
+}
+
+.connect .social-icon {
+    font-size: 1.1rem;
+    color: var(--color-gold-light);
+}   
+
+.social-link {
+    text-decoration: none;
+    color: var(--color-gold-light);
+}
+
+.social-link:visited {
+    color: var(--color-gold-light);
+}
+
+.social-link:hover,
+.social-link:active,
+.social-link:focus {
+    text-decoration: none;
+    color: var(--color-gold-light);
+}
+
+/* ===== Footer ===== */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    background-color: var(--color-teal-dark);
+    color: var(--color-teal-pale-2);
+    font-size: 0.85rem;
+}
+
+footer a {
+    color: var(--color-gold-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: var(--color-gold);
+} 
+
+/* ===== Popup System ===== */
+
+/* ===== Backdrop ===== */
+.popup-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 1900;
+
+    background-color: rgba(13, 18, 16, 0.65);
+    backdrop-filter: blur(2px);
+}
+
+/* ===== Popup Container ===== */
+.pop-up {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2000;
+
+    width: 90%;
+    max-width: 960px;
+    max-height: 85vh;
+    overflow-y: auto;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    padding: 3rem 2.5rem;
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+/* ===== Close Button ===== */
+.popup-close {
+    position: sticky;
+    top: 0;
+    left: 100%;
+    margin-left: auto;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-teal-pale-2);
+    color: var(--color-teal-dark-2);
+    font-size: 1.1rem;
+    cursor: pointer;
+
+    grid-column: 1 / -1;
+    justify-self: end;
+
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.popup-close:hover {
+    background-color: var(--color-teal);
+    color: var(--color-white);
+    transform: rotate(90deg);
+}
+
+/* ===== Individual Project Card inside Popup ===== */
+.project {
+    display: flex;
+    flex-direction: column;
+
+    padding: 1.5rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-teal-pale-2);
+    border-radius: 14px;
+}
+
+.project-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    background-color: var(--color-teal-pale-2);
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+}
+
+.project-desc {
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--color-teal-dark-2);
+    margin-bottom: 1.25rem;
+}
+
+.project-link {
+    margin-top: auto;
+    align-self: flex-start;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-teal);
+    text-decoration: none;
+
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.project-link:hover {
+    color: var(--color-teal-dark);
 }

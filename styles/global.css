@@ -25,16 +25,35 @@
 
 body {
     font-family: var(--font-body);
+    position: relative;
 }
 
 h1, h2, h3, h4, .section-title {
     font-family: var(--font-heading);
 }
 
+.section-title{
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-teal);
+    margin-bottom: 1.5rem;
+}
+
+section{
+    padding: 5rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 .grid {
     display: grid;
 }
 
 .flexbox {
     display: flex;
+}
+
+.none {
+    display: none !important;
 }

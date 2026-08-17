@@ -8,6 +8,7 @@
     <!-- ICON CDN -->
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@13/font/simple-icons.min.css" />
     
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,10 +23,12 @@
     
     <!-- SCRIPTS -->
     <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/pop-up.js" defer></script>
+    <script src="scripts/header.js" defer></script>
 </head>
 
 <body>
-    <header>
+    <header class="header">
         <nav class="navbar">
             <div class="logo">
                 <a href="/">
@@ -53,32 +56,38 @@
                         Contact Me
                     </a></li>
                 </ul>
+                
+                <button class="hamburger none" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+    <i class="fa-solid fa-bars"></i>
+</button>
         </nav>
     </header>
 
     <main class="main-body">
         <section id="hero-section" class="hero-section">
-            <h2 class="section-title">About Me</h2>
-            <div class="hero-img-block">
-                <img src="images/MyPic~2.png" alt="My Picture" class="hero-img">
-            </div>
-            <div class="hero-txt-block">
-                <p class="hero-intro">
+            <div class="hero-grid">
+                <div class="hero-img-block">
+                    <img src="images/MyPic~2.png" alt="My Picture" class="hero-img">
+                </div>
+                <div class="hero-txt-block">
+                    <h2 class="section-title">About Me</h2>
+                    <p class="hero-intro">
                     Hi, I am <span class="my-name">Chiemerie Obinwa</span>, 
                     a Computer Science student at the Federal University of 
                     Technology, Owerri (FUTO), Nigeria. I am a front end 
                     developer and tech enthusiast with growing passion for 
                     System Architecture and Designs, Defensive Security, 
                     Cloud Engineering and AI Engineering.
-                </p>
-            </div>
-        </section>
+                    </p>
+                </div>
+               </div>
+            </section>
 
         <section id="projects-section" class="projects-section">
             <h2 class="section-title">My Projects</h2>
 
             <div class="projects-card-container grid">
-                <div class="project-theme-card web-developement">
+                <div id="web-dev" class="project-theme-card">
                     <img src="" alt="Web Design Project" class="project-card-img"/>
                     <h3 class="project-theme title-3">Web-Developement</h3>
                     <p class="project-theme-desc"> As a Front-End Web Developer,  my roles in these projects includes but are limited to</p>
@@ -91,7 +100,7 @@
                     </ul>
                 </div>
 
-                <div class="project-theme-card graphics-design">
+                <div id="graphics-design" class="project-theme-card">
                     <img src="" alt="Graphic Design Project" class="project-card-img"/>
                     <h3 class="project-theme title-3">Graphic Design</h3>
                     <p class="project-theme-desc"> As a Graphic Design,  my roles in these projects includes but are limited to</p>
@@ -105,7 +114,7 @@
                 </div>
 
                 <!-- <div class="project-theme-card cyber-security"></div> -->
-                <div class="project-theme-card research-articles">
+                <div id="research-articles" class="project-theme-card">
                     <img src="" alt="Research Article Projects" class="project-card-img"/>
                     <h3 class="project-theme title-3">Research Articles</h3>
                     <p class="project-theme-desc"> As a Scholar,  my roles in these projects includes but are limited to</p>
@@ -250,8 +259,6 @@
 
         <section id="story-section" class="story-section">
             <h2 class="section-title">My Story</h2>
-
-            <a href="" download="Chiemerie Obinwa's Resume">Download My Resume</a>
              
             <div class="my-story">
                 <div class="story-txt-block">
@@ -261,10 +268,13 @@
                         impedit a soluta. Nlila neque illo ut accusantium totam 
                         maxime harum dignissimos autem sit.
                     </p>
+                    <a class="resume-download" href="/preview"
+    target="_blank"
+    rel="noopener">View My Resume</a>
                 </div>
 
                 <div class="story-img-block">
-                    <img src="images/MyPic~Seat.png" alt="My Picture" class="hero-img">
+                    <img src="images/MyPic~Seat.png" alt="My Picture" class="story-img">
                 </div>
             </div>
         </section>
@@ -290,208 +300,92 @@
               <div class="connect">
                  <h3 class="connect-title title-3">Or connect with me</h3>
                  <div class="flexbox">
-                    <span class="flex-object">
-                     <i class="devicon-github-original"></i>
-                     </span>
-          
-                    <span class="flex-object">
-                    <i class="devicon-linkedin-plain"></i>
-                    </span>
+                     <a class="social-link" href="https://github.com/Chi7Frank">
+                         <span class="flex-object">
+                     <i class="devicon-github-original social-icon"></i>
+                     Github</span>
+                     </a>
+                   
+                   <a class="social-link" href="https://www.linkedin.com/in/chiemerie-obinwa-5a06231b8">
+                   <span class="flex-object">
+                    <i class="devicon-linkedin-plain social-icon"></i>
+                    LinkedIn</span>    
+                   </a>
+
+                    <a class="social-link" href="https://x.com/Alpha_MBird">
+                       <span class="flex-object">
+                    <i class="devicon-twitter-original social-icon"></i>
+                    Twitter(X)</span>
+                   </a>
                     
-                    <span class="flex-object">Discord</span>
+                    <a class="social-link" href="https://www.facebook.com/share/1DSJQTE9N5/">
+                     <span class="flex-object">
+                     <i class="devicon-facebook-plain social-icon"></i>
+                    Facebook</span>  
+                   </a>
                     
-                    <span class="flex-object">
-                    <i class="devicon-twitter-original"></i>
-                    </span>
+                    <a class="social-link" href="https://wa.me/2349167748639">
+                       <span class="flex-object">
+                        <i class="fa-brands fa-whatsapp social-icon"></i>
+                        WhatsApp</span>
+                   </a>
                     
-                    <span class="flex-object">
-                     <i class="devicon-facebook-plain"></i>
-                    </span>
+                       <a class="social-link" href="https://discord.com/users/1435365435720601660">
+                       <span class="flex-object">
+                        <i class="fa-brands fa-discord social-icon"></i>
+                        Discord</span>
+                   </a>                     
                     
-                    <span class="flex-object">SubStack</span>
+                       <a class="social-link" href="https://substack.com/@alphamockingbird">
+                       <span class="flex-object">
+                        <i class="si si-substack social-icon"></i>
+                        SubStack</span>
+                   </a> 
                     
-                    <span class="flex-object">WhatsApp</span>
                  </div>
               </div>
         </section>
     </main>
 
-    <aside>
-        <div id="web-design" class="pop-up grid">
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
+<aside>
+    <!-- Backdrop dims the page behind the popup -->
+    <div class="popup-backdrop none" data-popup-backdrop></div>
 
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-            
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
+    <div class="pop-up none grid web-dev" data-popup>
+        <button class="popup-close" data-popup-close aria-label="Close project details">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
 
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
+        <div class="project">
+            <img src="" alt="Project Name" class="project-img"/>
+            <h3 class="project-title title-3">Campus Cent</h3>
+            <p class="project-desc">
+                Campus Cent is an Advanced LifeStyle Budgeter Application
+                made exclusively for students in the Nigerian university
+                Communities. It makes use of well trained models to check
+                student fiscal capacity against predicted market prices
+                and helps students make the right financial decision
+            </p>
+            <a href="" class="project-link">Check it Out &rarr;</a>
         </div>
 
-         <div id="graphics-design" class="pop-up grid">
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
+        <!-- repeat .project blocks ×4 as you already have -->
+    </div>
 
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-            
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
+    <div class="pop-up none grid graphics-design" data-popup>
+        <button class="popup-close" data-popup-close aria-label="Close project details">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- 4 .project blocks as you already have -->
+    </div>
 
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-        </div>
-
-
-         <div id="research-articles" class="pop-up grid">
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-            
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-
-            <div class="project ">
-                <img src="" alt="Project Name" class="project-img"/>
-                <h3 class="project-title title-3">Campus Cent</h3>
-                <p class="project-desc">
-                    Campus Cent is an Advanced LifeStyle Budgeter Application 
-                    made exclusively for students in the Nigerian university 
-                    Communities. It makes use of well trained models to check 
-                    student fiscal capacity against predicted market prices 
-                    and helps students make the right financial decision
-                </p>
-
-                <a href="" class="project-link">Check it Out &rarr;</a>
-            </div>
-        </div>
-    </aside>
+    <div  class="pop-up none grid research-articles" data-popup>
+        <button class="popup-close" data-popup-close aria-label="Close project details">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <!-- 4 .project blocks as you already have -->
+    </div>
+</aside>
 
     <footer>
     <p>&copy; 2026 Chiemerie Obinwa. All rights reserved.</p>

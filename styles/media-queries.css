@@ -1,13 +1,12 @@
 /* ===== Responsive: stack on smaller screens ===== */
 @media (max-width: 768px) {
-    .hero-section {
+    .hero-grid{
         grid-template-columns: 1fr;
         grid-template-areas:
-            "title"
             "img"
             "text";
         text-align: center;
-        padding: 3rem 1.5rem;
+        /* padding: 3rem 1.5rem; */
     }
 
     .hero-img-block {

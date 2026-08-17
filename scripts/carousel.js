@@ -15,9 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let currentIndex = 0;
     let autoplayTimer = null;
-    let autoplayStopped = false;
+    let resumeTimer = null;
 
     const AUTOPLAY_DELAY = 5000;
+    const RESUME_DELAY = 8000; // how long to wait after a click before autoplay resumes
 
     /* ---- Core render ---- */
     function goToSlide(index) {
@@ -55,24 +56,31 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    /* Permanently stop autoplay once the user interacts with the carousel */
-    function haltAutoplayOnInteraction() {
-        autoplayStopped = true;
+    /* Pause autoplay after user interaction, then resume after RESUME_DELAY of no further clicks */
+    function pauseThenResume() {
         stopAutoplay();
+
+        if (resumeTimer) {
+            clearTimeout(resumeTimer);
+        }
+
+        resumeTimer = setTimeout(() => {
+            startAutoplay();
+        }, RESUME_DELAY);
     }
 
     /* ---- Button events ---- */
     if (nextBtn) {
         nextBtn.addEventListener("click", () => {
             nextSlide();
-            haltAutoplayOnInteraction();
+            pauseThenResume();
         });
     }
 
     if (prevBtn) {
         prevBtn.addEventListener("click", () => {
             prevSlide();
-            haltAutoplayOnInteraction();
+            pauseThenResume();
         });
     }
 
@@ -80,14 +88,14 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach((dot, i) => {
         dot.addEventListener("click", () => {
             goToSlide(i);
-            haltAutoplayOnInteraction();
+            pauseThenResume();
         });
     });
 
-    /* ---- Clicking anywhere on a slide also stops autoplay ---- */
+    /* ---- Clicking anywhere on a slide also pauses, then resumes ---- */
     slides.forEach((slide) => {
         slide.addEventListener("click", () => {
-            haltAutoplayOnInteraction();
+            pauseThenResume();
         });
     });
 
