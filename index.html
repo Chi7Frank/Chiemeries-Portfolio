@@ -6,11 +6,24 @@
     <title>Chiemerie's Portfolio</title>
     
     <!-- ICON CDN -->
-    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />   
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
     <!-- STYLESHEET -->
-    <style rel="stylesheet"></style>
+    <link rel="stylesheet" href="styles/global.css"/>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/media-queries.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    
+    <!-- SCRIPTS -->
+    <script src="scripts/carousel.js" defer></script>
 </head>
+
 <body>
     <header>
         <nav class="navbar">
@@ -44,10 +57,10 @@
     </header>
 
     <main class="main-body">
-        <section div="hero-section" class="hero-section">
+        <section id="hero-section" class="hero-section">
             <h2 class="section-title">About Me</h2>
             <div class="hero-img-block">
-                <img src="" alt="My Picture" class="hero-img">
+                <img src="images/MyPic~2.png" alt="My Picture" class="hero-img">
             </div>
             <div class="hero-txt-block">
                 <p class="hero-intro">
@@ -70,11 +83,11 @@
                     <h3 class="project-theme title-3">Web-Developement</h3>
                     <p class="project-theme-desc"> As a Front-End Web Developer,  my roles in these projects includes but are limited to</p>
                     <ul class="project-theme-list">
-                        <li>Design Translation</li>
-                        <li>Ensuring Responsiveness</li>
-                        <li>Performance Optimization</li>
-                        <li>API Integration</li>
-                        <li>Testing and Debugging</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Design Translation</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Ensuring Responsiveness</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Performance Optimization</li>
+                        <li><i class="fa-regular fa-circle-check"></i>API Integration</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Testing and Debugging</li>
                     </ul>
                 </div>
 
@@ -83,11 +96,11 @@
                     <h3 class="project-theme title-3">Graphic Design</h3>
                     <p class="project-theme-desc"> As a Graphic Design,  my roles in these projects includes but are limited to</p>
                     <ul class="project-theme-list">
-                        <li>Conceptualization</li>
-                        <li>Colour Palette Creation</li>
-                        <li>Communication through Designs</li>
-                        <li>Brand Identity Creation</li>
-                        <li>Social Media </li>
+                        <li><i class="fa-regular fa-circle-check"></i>Conceptualization</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Colour Palette Creation</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Communication through Designs</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Brand Identity Creation</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Social Media </li>
                     </ul>
                 </div>
 
@@ -97,71 +110,143 @@
                     <h3 class="project-theme title-3">Research Articles</h3>
                     <p class="project-theme-desc"> As a Scholar,  my roles in these projects includes but are limited to</p>
                     <ul class="project-theme-list">
-                        <li>Intense Investigation</li>
-                        <li>Fact Findings</li>
-                        <li>Citing Sources</li>
-                        <li>Structuring Drafts</li>
-                        <li>Addressing Feedback </li>
+                        <li><i class="fa-regular fa-circle-check"></i>Intense Investigation</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Fact Findings</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Citing Sources</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Structuring Drafts</li>
+                        <li><i class="fa-regular fa-circle-check"></i>Addressing Feedback </li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section id="skills-section" class="skills-section">
-             <h2 class="section-title">My Skillset</h2>
-            <div class="skills-container grid">
+    <h2 class="section-title">My Skillset</h2>
+    <div class="skills-container grid">
 
-                <div class="technical-skills grid">
-                    <h3 class="skill-title title-3">Technical Skills</h3>
-                    <ul class="language-skills flexbox">
-                        <li class="flex-object">HTML</li>
-                        <li class="flex-object">CSS</li>
-                        <li class="flex-object">JS</li>
-                        <li class="flex-object">PY</li>
-                    </ul>
+        <div class="technical-skills">
+            <h3 class="skill-title title-3">Technical Skills</h3>
 
-                    <ul class="collab-skills flexbox">
-                        <li class="flex-object">GIT</li>
-                        <li class="flex-object">GITHUB</li>
-                    </ul>
-                </div>
-                <div class="soft-skills">
-                    <h3 class="skill-title title-3">Soft Skills</h3>
-                    <div class="flexbox">
-                        <span class="flex-object">Collaboration</span>
-                        <span class="flex-object">Team Management</span>
-                        <span class="flex-object">Public Speaking</span>
-                        <span class="flex-object">Subject Mentoring</span>
-                    </div>
-                </div>
+            <h4 class="skill-group-label">Languages</h4>
+            <ul class="language-skills flexbox">
+                <li class="flex-object">
+                    <i class="devicon-html5-plain colored"></i>
+                    <span>HTML</span>
+                </li>
+                <li class="flex-object">
+                    <i class="devicon-css3-plain colored"></i>
+                    <span>CSS</span>
+                </li>
+                <li class="flex-object">
+                    <i class="devicon-javascript-plain colored"></i>
+                    <span>JS</span>
+                </li>
+                <li class="flex-object">
+                    <i class="devicon-python-plain colored"></i>
+                    <span>PY</span>
+                </li>
+            </ul>
+
+            <h4 class="skill-group-label">Collaboration Tools</h4>
+            <ul class="collab-skills flexbox">
+                <li class="flex-object">
+                    <i class="devicon-git-plain colored"></i>
+                    <span>GIT</span>
+                </li>
+                <li class="flex-object">
+                    <i class="devicon-github-original"></i>
+                    <span>GITHUB</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="soft-skills">
+            <h3 class="skill-title title-3">Soft Skills</h3>
+            <div class="flexbox">
+                <span class="flex-object">
+                    <i class="fa-solid fa-people-group"></i>
+                    <span>Collaboration</span>
+                </span>
+                <span class="flex-object">
+                    <i class="fa-solid fa-users-gear"></i>
+                    <span>Team Management</span>
+                </span>
+                <span class="flex-object">
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                    <span>Public Speaking</span>
+                </span>
+                <span class="flex-object">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <span>Subject Mentoring</span>
+                </span>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
-        <section id="certification-sections" class="certifications-section">
-             <h2 class="section-title">My certificates & Certifications</h2>
+<section id="certification-sections" class="certifications-section">
+    <h2 class="section-title">My Certificates &amp; Certifications</h2>
 
-             <div class="carousel flexbox">
-                 <figure class="carousel-slide">
-                    <img src="" alt="Certificate Description">
-                    <figcaption>Certificate Description</figcaption>
-                </figure>
+    <div class="carousel" data-carousel>
+        <div class="carousel-track" data-carousel-track>
 
-                <figure class="carousel-slide">
+            <figure class="carousel-slide">
+                <div class="carousel-img-block">
                     <img src="" alt="Certificate Description">
-                    <figcaption>Certificate Description</figcaption>
-                </figure>
-                
-                <figure class="carousel-slide">
-                    <img src="" alt="Certificate Description">
-                    <figcaption>Certificate Description</figcaption>
-                </figure>
+                </div>
+                <div class="carousel-text-block">
+                    <h4 class="carousel-title">Certificate Name</h4>
+                    <p class="carousel-desc">Certificate Description</p>
+                </div>
+            </figure>
 
-                <figure class="carousel-slide">
+            <figure class="carousel-slide">
+                <div class="carousel-img-block">
                     <img src="" alt="Certificate Description">
-                    <figcaption>Certificate Description</figcaption>
-                </figure>
-            </div>
-        </section>
+                </div>
+                <div class="carousel-text-block">
+                    <h4 class="carousel-title">Certificate Name</h4>
+                    <p class="carousel-desc">Certificate Description</p>
+                </div>
+            </figure>
+
+            <figure class="carousel-slide">
+                <div class="carousel-img-block">
+                    <img src="" alt="Certificate Description">
+                </div>
+                <div class="carousel-text-block">
+                    <h4 class="carousel-title">Certificate Name</h4>
+                    <p class="carousel-desc">Certificate Description</p>
+                </div>
+            </figure>
+
+            <figure class="carousel-slide">
+                <div class="carousel-img-block">
+                    <img src="" alt="Certificate Description">
+                </div>
+                <div class="carousel-text-block">
+                    <h4 class="carousel-title">Certificate Name</h4>
+                    <p class="carousel-desc">Certificate Description</p>
+                </div>
+            </figure>
+
+        </div>
+
+        <button class="carousel-btn carousel-btn-prev" data-carousel-prev aria-label="Previous certificate">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="carousel-btn carousel-btn-next" data-carousel-next aria-label="Next certificate">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <div class="carousel-dots" data-carousel-dots>
+            <button class="carousel-dot active" data-slide-to="0" aria-label="Go to slide 1"></button>
+            <button class="carousel-dot" data-slide-to="1" aria-label="Go to slide 2"></button>
+            <button class="carousel-dot" data-slide-to="2" aria-label="Go to slide 3"></button>
+            <button class="carousel-dot" data-slide-to="3" aria-label="Go to slide 4"></button>
+        </div>
+    </div>
+</section>
 
         <section id="story-section" class="story-section">
             <h2 class="section-title">My Story</h2>
@@ -179,7 +264,7 @@
                 </div>
 
                 <div class="story-img-block">
-                    <img src="" alt="My Picture" class="hero-img">
+                    <img src="images/MyPic~Seat.png" alt="My Picture" class="hero-img">
                 </div>
             </div>
         </section>
@@ -412,5 +497,6 @@
     <p>&copy; 2026 Chiemerie Obinwa. All rights reserved.</p>
     <a href="#">Back to top &uarr;</a>
 </footer>
+
 </body>
 </html>

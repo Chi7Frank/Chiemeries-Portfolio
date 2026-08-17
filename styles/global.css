@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== Color Variables ===== */
+:root {
+    --color-black: #0d1210;
+    --color-teal-dark-2: #002D2D;
+    --color-teal-dark: #0f3d3e;
+    --color-teal: #008080;
+    --color-teal-light: #4fb0a5;
+    --color-teal-pale: #69B4B4;
+    --color-teal-pale-2: #C3E1E1;
+    --color-white: #ffffff;
+    --color-gold: #d4a24c;
+    --color-gold-light: #e8c17d;
+
+    --header-height: 72px;
+    /* FONTS */
+    --font-heading: "Space Grotesk", sans-serif;
+    --font-body: "Inter", sans-serif;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, .section-title {
+    font-family: var(--font-heading);
+}
+
+.grid {
+    display: grid;
+}
+
+.flexbox {
+    display: flex;
+}
