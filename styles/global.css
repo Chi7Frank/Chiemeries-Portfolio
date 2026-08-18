@@ -14,6 +14,7 @@
     --color-teal-pale: #69B4B4;
     --color-teal-pale-2: #C3E1E1;
     --color-white: #ffffff;
+    --color-white-transparent: rgba(255, 255, 255, 0.25);
     --color-gold: #d4a24c;
     --color-gold-light: #e8c17d;
 
@@ -56,4 +57,4 @@ section{
 
 .none {
     display: none !important;
-}
+}    

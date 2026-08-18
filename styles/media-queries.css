@@ -1,4 +1,4 @@
-/* ===== Responsive: stack on smaller screens ===== */
+/* /* ===== Responsive: stack on smaller screens =====
 @media (max-width: 768px) {
     .hero-grid{
         grid-template-columns: 1fr;
@@ -6,7 +6,7 @@
             "img"
             "text";
         text-align: center;
-        /* padding: 3rem 1.5rem; */
+        /* padding: 3rem 1.5rem; 
     }
 
     .hero-img-block {
@@ -15,5 +15,234 @@
 
     .hero-intro {
         font-size: 1.1rem;
+    }
+} */
+
+/* ================================================
+   PHONE (max-width: 640px)
+   ================================================ */
+@media (max-width: 768px) {
+
+    /* ===== Header / Nav → Hamburger ===== */
+    .nav-links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 40px;
+        height: 40px;
+        border: none;
+        background: transparent;
+        color: var(--color-teal-dark-2);
+        font-size: 1.4rem;
+        cursor: pointer;
+    }
+
+    .navbar {
+        padding: 0 1.25rem;
+    }
+
+    /* Mobile dropdown menu (JS will toggle .none on this later) */
+    .nav-links.mobile-open {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+
+        position: absolute;
+        top: var(--header-height);
+        left: 0;
+        width: 100%;
+
+        background-color: var(--color-white-transparent);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--color-teal-pale-2);
+        box-shadow: 0 12px 24px rgba(0, 128, 128, 0.12);
+        padding: 1rem 1.5rem;
+    }
+
+    .nav-links.mobile-open li {
+        width: 100%;
+        padding: 0.75rem 0;
+        border-bottom: 1px solid var(--color-teal-pale-2);
+    }
+
+    .nav-links.mobile-open li:last-child {
+        border-bottom: none;
+    }
+
+    /* ===== Generic Section Padding ===== */
+    section {
+        padding: 3rem 1.25rem;
+    }
+
+    /* ===== Hero Section ===== */
+    .hero-section {
+        padding: 2.5rem 1.25rem;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        row-gap: 2rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .hero-img-block {
+        order: 1;
+    }
+
+    .hero-txt-block {
+        order: 2;
+    }
+
+    .hero-img {
+        max-width: 240px;
+    }
+
+    .hero-intro {
+        font-size: 1.05rem;
+        text-align: justify;
+    }
+
+    /* ===== Projects Section ===== */
+    .projects-card-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .project-theme-desc{
+        text-align: justify;
+    }
+
+    /* ===== Skills Section ===== */
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+     .flex-object {
+        flex: 1 1 calc(50% - 0.5rem);
+        width: auto;
+        min-height: 90px;
+        padding: 0.85rem 0.5rem;
+     }
+
+
+    .flex-object i {
+        font-size: 1.6rem;
+    }
+
+    .flex-object span {
+        font-size: 0.72rem;
+    }
+     
+    .language-skills,
+    .collab-skills,
+    .communication-skills,
+    .prob-solving-skills {
+        gap: 0.75rem;
+    }
+
+    /* ===== Certifications / Carousel ===== */
+    .carousel-slide {
+        grid-template-columns: 1fr;
+        min-height: unset;
+        padding: 1.5rem;
+        gap: 1.25rem;
+    }
+
+    .carousel-img-block img {
+        height: 220px;
+    }
+
+    .carousel-title {
+        font-size: 1.15rem;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 0.85rem;
+    }
+
+    .carousel-btn-prev {
+        left: 4px;
+    }
+
+    .carousel-btn-next {
+        right: 4px;
+    }
+
+    /* ===== Story Section ===== */
+    .my-story {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .story-img-block {
+        order: 1;
+    }
+
+    .story-txt-block {
+        order: 2;
+    }
+
+    .story-text {
+        font-size: 1rem;
+        text-align: justify;
+        margin-bottom: 2rem;
+    }
+
+    .story-img {
+        max-width: 280px;
+    }
+
+    /* ===== Contact Section ===== */
+    .contact-section {
+        grid-template-columns: 1fr;
+        padding: 3rem 1.25rem;
+        gap: 2.5rem;
+    }
+
+    .contact-section form {
+        padding: 1.75rem;
+    }
+
+    .connect {
+        padding-top: 0;
+    }
+    .connect .flexbox {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.75rem;
+    }
+
+    .connect .flex-object {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 1.25rem 0.5rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        flex-direction: column;
+        gap: 0.75rem;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    /* ===== Popups ===== */
+    .pop-up {
+        width: 92%;
+        max-height: 90vh;
+        padding: 1.75rem 1.25rem;
+        grid-template-columns: 1fr;
     }
 }

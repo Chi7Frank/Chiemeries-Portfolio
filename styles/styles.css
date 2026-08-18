@@ -14,7 +14,7 @@ header {
     width: 100%;
     z-index: 1000;
     
-    background-color: rgba(195, 225, 225, 0.25);
+    background-color: var(--color-white-transparent);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 
@@ -31,11 +31,16 @@ header {
     padding: 0 2rem;
 }
 
+.hamburger{
+    display: none;
+}
+
 /* ===== Logo ===== */
 .logo img {
     height: 40px;
     width: auto;
     display: block;
+    border-radius: 50%;
 }
 
 .logo a {
@@ -235,11 +240,18 @@ header {
     color: var(--color-black);
 }
 
+.project-theme-list li:last-child{
+    margin-top: 0.8rem;
+}
+
 .project-theme-list li i {
     color: var(--color-teal);
     font-size: 0.95rem;
 }
 
+.project-theme-list li:last-child i{
+    color: var(--color-gold-light);
+}
 
 /* ===== Skills Section ===== */
 .skills-section {
