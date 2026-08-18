@@ -1,24 +1,4 @@
-/* /* ===== Responsive: stack on smaller screens =====
-@media (max-width: 768px) {
-    .hero-grid{
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "img"
-            "text";
-        text-align: center;
-        /* padding: 3rem 1.5rem; 
-    }
-
-    .hero-img-block {
-        justify-content: center;
-    }
-
-    .hero-intro {
-        font-size: 1.1rem;
-    }
-} */
-
-/* ================================================
+/*===== Responsive: stack on smaller screens =====================================================
    PHONE (max-width: 640px)
    ================================================ */
 @media (max-width: 768px) {
