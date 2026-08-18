@@ -284,19 +284,16 @@ header {
 }
 
 /* ===== Technical Skills Column ===== */
-.technical-skills {
+.technical-skills,
+.soft-skills{
     display: flex;
     flex-direction: column;
 }
 
 .language-skills,
-.collab-skills {
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-/* ===== Soft Skills Column ===== */
-.soft-skills .flexbox {
+.collab-skills,
+.communication-skills,
+.prob-solving-skills{
     flex-wrap: wrap;
     gap: 1rem;
 }
@@ -307,10 +304,11 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
     gap: 0.6rem;
 
     width: 110px;
+    min-height: 120px;
     padding: 1.25rem 0.75rem;
 
     background-color: var(--color-white);
