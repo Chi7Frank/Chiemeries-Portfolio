@@ -1,0 +1,29 @@
+{
+    "technical": {
+        "Languages": [
+            { "name": "HTML", "icon": "devicon-html5-plain colored  colored text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "CSS", "icon": "devicon-css3-plain colored colored text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "JS", "icon": "devicon-javascript-plain colored colored text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "PY", "icon": "devicon-python-plain colored colored text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "React", "icon": "devicon-react-plain colored colored text-[2rem] max-md:text-[1.6rem]" }
+        ],
+        "Collaboration Tools": [
+            { "name": "GIT", "icon": "devicon-git-plain colored colored text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "GITHUB", "icon": "devicon-github-original colored text-[2rem] max-md:text-[1.6rem]" }
+        ]
+    },
+    "soft": {
+        "Communication": [
+            { "name": "Collaboration", "icon": "fa-solid fa-people-group text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Team Management", "icon": "fa-solid fa-users-gear text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Public Speaking", "icon": "fa-solid fa-person-chalkboard text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Subject Mentoring", "icon": "fa-solid fa-chalkboard-user text-teal-primary text-[2rem] max-md:text-[1.6rem]" }
+        ],
+        "Problem Solving": [
+            { "name": "Research", "icon": "fa-solid fa-magnifying-glass-chart text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Critical Thinking", "icon": "fa-solid fa-brain text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Decision Making", "icon": "fa-solid fa-signs-post text-teal-primary text-[2rem] max-md:text-[1.6rem]" },
+            { "name": "Troubleshooting", "icon": "fa-solid fa-wrench text-teal-primary text-[2rem] max-md:text-[1.6rem]" }
+        ]
+    }
+}

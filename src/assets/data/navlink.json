@@ -1,0 +1,32 @@
+[
+    {
+        "section" : "#hero-section",
+        "title": "About Me",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale active"
+    },
+    {
+        "section" : "#projects-section",
+        "title": "Projects",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale "
+    },
+    {
+        "section" : "#skills-section",
+        "title": "Skillsets",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale "
+    },
+    {
+        "section" : "#certification-sections",
+        "title": "Certifications",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale "
+    },
+    {
+        "section" : "#story-section",
+        "title": "My Story",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale "
+    },
+    {
+        "section" : "#contact-section",
+        "title": "Contact Me",
+        "classes": "relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale "
+    }
+]

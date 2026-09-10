@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors */
+  --color-teal-dark-2: #002D2D;
+  --color-teal-dark: #0f3d3e;
+  --color-teal-primary: #008080;
+  --color-teal-light: #4fb0a5;
+  --color-teal-pale: #69B4B4;
+  --color-teal-pale-2: #C3E1E1;
+
+  --color-brand-black: #0d1210;
+
+  --color-gold-accent: #d4a24c;
+  --color-gold-light: #e8c17d;
+
+  /* Fonts */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+}

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chiemerie's Portfolio</title>
+    <meta name="description" content="Portfolio of Chiemerie Obinwa, Computer Science student and Front-End Web Developer, refactored with Tailwind CSS." />
+    <meta property="og:title" content="Chiemerie's Portfolio" />
+    <meta property="og:description" content="Portfolio of Chiemerie Obinwa, Computer Science student and Front-End Web Developer, refactored with Tailwind CSS." />
+    
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              'teal-dark-2': '#002D2D',
+              'teal-dark': '#0f3d3e',
+              'teal-primary': '#008080',
+              'teal-light': '#4fb0a5',
+              'teal-pale': '#69B4B4',
+              'teal-pale-2': '#C3E1E1',
+              'brand-black': '#0d1210',
+              'gold-accent': '#d4a24c',
+              'gold-light': '#e8c17d',
+            },
+            fontFamily: {
+              heading: ['"Space Grotesk"', 'sans-serif'],
+              body: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+    
+    <!-- ICON CDN -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons-font@13/font/simple-icons.min.css" />
+    
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CUSTOM STYLESHEET FOR NON-REFACTORABLE RULES -->
+    <link rel="stylesheet" href="couldnot.css" />
+    
+    <!-- SCRIPTS -->
+    <script src="scripts/carousel.js" defer></script>
+    <script src="scripts/pop-up.js" defer></script>
+    <script src="scripts/header.js" defer></script>
+</head>
+
+<body class="font-body relative bg-white text-brand-black m-0 p-0 antialiased">
+    <!-- Header / Navbar -->
+    <header class="header bg-teal-pale-2 border-b border-teal-pale shadow-[0_1px_8px_rgba(15,61,62,0.06)] transition-[box-shadow] duration-200">
+        <nav class="navbar flex items-center justify-between h-[72px] px-8 max-md:px-5 max-w-[1200px] mx-auto">
+            <div class="logo">
+                <a href="/" class="flex items-center">
+                    <img src="images/C-logo-dark.png" alt="Chiemerie's Logo" class="h-10 w-auto block rounded-full" />
+                </a>
+            </div>
+                
+            <ul class="nav-links flex items-center gap-9 list-none max-md:hidden">
+                <li>
+                    <a href="#hero-section" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale active">
+                        About Me
+                    </a>
+                </li>
+                <li>
+                    <a href="#projects-section" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale">
+                        Projects
+                    </a>
+                </li>
+                <li>
+                    <a href="#skills-section" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale">
+                        Skillsets
+                    </a>
+                </li>
+                <li>
+                    <a href="#certification-sections" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale">
+                        Certifications
+                    </a>
+                </li>
+                <li>
+                    <a href="#story-section" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale">
+                        My Story
+                    </a>
+                </li>
+                <li>
+                    <a href="#contact-section" class="relative no-underline text-teal-dark-2 font-medium text-[0.95rem] tracking-[0.02em] py-2 px-[0.1rem] transition-colors duration-200 hover:text-teal-pale">
+                        Contact Me
+                    </a>
+                </li>
+            </ul>
+                
+            <button class="hamburger hidden max-md:flex max-md:items-center max-md:justify-center max-md:w-10 max-md:h-10 max-md:border-none max-md:bg-transparent max-md:text-teal-dark-2 max-md:text-xl max-md:cursor-pointer" id="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <main class="main-body">
+        <!-- Hero Section -->
+        <section id="hero-section" class="hero-section max-w-[1200px] mx-auto py-12 px-8 max-md:py-10 max-md:px-5 bg-teal-pale-2">
+            <div class="hero-grid grid grid-cols-1 md:grid-cols-[1fr_1.2fr] items-center gap-x-12 gap-y-4 max-md:gap-y-8 mt-8 max-md:mt-4 max-md:text-center">
+                <div class="hero-img-block flex justify-center max-md:order-1">
+                    <img src="images/MyPic~2.png" alt="My Picture" class="hero-img w-full max-w-[380px] max-md:max-w-[240px] aspect-square object-cover rounded-[20%] border-[3px] border-teal-dark shadow-[0_12px_32px_rgba(0,128,128,0.18)]" />
+                </div>
+                <div class="hero-txt-block max-md:order-2">
+                    <h2 class="section-title text-base font-semibold tracking-[0.15em] uppercase text-teal-primary mb-6 font-heading">About Me</h2>
+                    <p class="hero-intro text-[1.35rem] max-md:text-[1.05rem] leading-[1.7] text-brand-black text-justify">
+                        Hi, I am <span class="my-name text-teal-primary font-bold">Chiemerie Obinwa</span>, 
+                        a Computer Science student at the Federal University of 
+                        Technology, Owerri (FUTO), Nigeria. I am a front end 
+                        developer and tech enthusiast with growing passion for 
+                        System Architecture and Designs, Defensive Security, 
+                        Cloud Engineering and AI Engineering.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects-section" class="projects-section max-w-[1200px] mx-auto py-20 px-8 max-md:py-12 max-md:px-5">
+            <h2 class="section-title text-base font-semibold tracking-[0.15em] uppercase text-teal-primary mb-10 font-heading">My Projects</h2>
+
+            <div class="projects-card-container grid grid-cols-1 md:grid-cols-3 gap-8 max-md:gap-6">
+                <!-- Web Dev Card -->
+                <div id="web-dev" class="project-theme-card bg-white border border-teal-pale-2 rounded-[14px] p-8 max-md:p-6 cursor-pointer flex flex-col transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1.5 hover:border-teal-light hover:shadow-[0_12px_28px_rgba(0,128,128,0.16)] active:-translate-y-0.5 active:shadow-[0_6px_14px_rgba(0,128,128,0.22)] active:border-teal-primary">
+                    <img src="images/webdev.png" alt="Web Design Project" class="project-card-img w-full h-[180px] object-cover rounded-lg mb-6 bg-teal-pale-2" />
+                    <h3 class="project-theme title-3 text-xl font-semibold text-brand-black mb-3 font-heading">Web-Development</h3>
+                    <p class="project-theme-desc text-[0.95rem] text-teal-dark-2 leading-normal mb-5 max-md:text-justify">
+                        As a Front-End Web Developer, my roles in these projects includes but are not limited to
+                    </p>
+                    <ul class="project-theme-list list-none flex flex-col gap-2.5 mt-auto">
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Design Translation</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Ensuring Responsiveness</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Performance Optimization</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>API Integration</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Testing and Debugging</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black mt-3"><i class="fa-regular fa-lightbulb text-gold-light text-[0.95rem]"></i>Tap Card to view more</li>
+                    </ul>
+                </div>
+
+                <!-- Graphic Design Card -->
+                <div id="graphics-design" class="project-theme-card bg-white border border-teal-pale-2 rounded-[14px] p-8 max-md:p-6 cursor-pointer flex flex-col transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1.5 hover:border-teal-light hover:shadow-[0_12px_28px_rgba(0,128,128,0.16)] active:-translate-y-0.5 active:shadow-[0_6px_14px_rgba(0,128,128,0.22)] active:border-teal-primary">
+                    <img src="images/graphics.png" alt="Graphic Design Project" class="project-card-img w-full h-[180px] object-cover rounded-lg mb-6 bg-teal-pale-2" />
+                    <h3 class="project-theme title-3 text-xl font-semibold text-brand-black mb-3 font-heading">Graphic Design</h3>
+                    <p class="project-theme-desc text-[0.95rem] text-teal-dark-2 leading-normal mb-5 max-md:text-justify">
+                        As a Graphic Designer, my roles in these projects includes but are not limited to
+                    </p>
+                    <ul class="project-theme-list list-none flex flex-col gap-2.5 mt-auto">
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Conceptualization</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Colour Palette Creation</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Communication through Designs</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Brand Identity Creation</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Social Media</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black mt-3"><i class="fa-regular fa-lightbulb text-gold-light text-[0.95rem]"></i>Tap Card to view more</li>
+                    </ul>
+                </div>
+
+                <!-- Research Articles Card -->
+                <div id="research-articles" class="project-theme-card bg-white border border-teal-pale-2 rounded-[14px] p-8 max-md:p-6 cursor-pointer flex flex-col transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1.5 hover:border-teal-light hover:shadow-[0_12px_28px_rgba(0,128,128,0.16)] active:-translate-y-0.5 active:shadow-[0_6px_14px_rgba(0,128,128,0.22)] active:border-teal-primary">
+                    <img src="images/articles.png" alt="Research Article Projects" class="project-card-img w-full h-[180px] object-cover rounded-lg mb-6 bg-teal-pale-2" />
+                    <h3 class="project-theme title-3 text-xl font-semibold text-brand-black mb-3 font-heading">Research Articles</h3>
+                    <p class="project-theme-desc text-[0.95rem] text-teal-dark-2 leading-normal mb-5 max-md:text-justify">
+                        As a Computer Scholar, my roles in these projects includes but are not limited to
+                    </p>
+                    <ul class="project-theme-list list-none flex flex-col gap-2.5 mt-auto">
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Intense Investigation</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Fact Findings</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Citing Sources</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Structuring Drafts</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black"><i class="fa-regular fa-circle-check text-teal-primary text-[0.95rem]"></i>Addressing Feedback</li>
+                        <li class="flex items-center gap-2.5 text-[0.9rem] text-brand-black mt-3"><i class="fa-regular fa-lightbulb text-gold-light text-[0.95rem]"></i>Tap Card to view more</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills-section" class="skills-section max-w-[1200px] mx-auto py-20 px-8 max-md:py-12 max-md:px-5">
+            <h2 class="section-title text-base font-semibold tracking-[0.15em] uppercase text-teal-primary mb-10 font-heading">My Skillset</h2>
+            <div class="skills-container grid grid-cols-1 md:grid-cols-2 gap-12 max-md:gap-10">
+
+                <div class="technical-skills flex flex-col">
+                    <h3 class="skill-title title-3 text-[1.3rem] font-semibold text-brand-black mb-6 font-heading">Technical Skills</h3>
+
+                    <h4 class="skill-group-label text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-teal-dark mt-0 mb-3 font-heading">Languages</h4>
+                    <ul class="language-skills flex flex-wrap gap-4 max-md:gap-3">
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-html5-plain colored text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">HTML</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-css3-plain colored text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">CSS</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-javascript-plain colored text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">JS</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-python-plain colored text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">PY</span>
+                        </li>
+                    </ul>
+
+                    <h4 class="skill-group-label text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-teal-dark mt-6 mb-3 font-heading">Collaboration Tools</h4>
+                    <ul class="collab-skills flex flex-wrap gap-4 max-md:gap-3">
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-git-plain colored text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">GIT</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="devicon-github-original text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">GITHUB</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="soft-skills flex flex-col">
+                    <h3 class="skill-title title-3 text-[1.3rem] font-semibold text-brand-black mb-6 font-heading">Soft Skills</h3>
+                    <h4 class="skill-group-label text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-teal-dark mt-0 mb-3 font-heading">Communication</h4>
+                    <ul class="communication-skills flex flex-wrap gap-4 max-md:gap-3">
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-people-group text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Collaboration</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-users-gear text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Team Management</span> 
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-person-chalkboard text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Public Speaking</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-chalkboard-user text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Subject Mentoring</span>
+                        </li>
+                    </ul>
+                    
+                    <h4 class="skill-group-label text-[0.85rem] font-semibold tracking-[0.08em] uppercase text-teal-dark mt-6 mb-3 font-heading">Problem Solving</h4>
+                    <ul class="prob-solving-skills flex flex-wrap gap-4 max-md:gap-3">
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-magnifying-glass-chart text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Research</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-brain text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Critical Thinking</span>
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-signs-post text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Decision Making</span> 
+                        </li>
+                        <li class="flex-object list-none flex flex-col items-center justify-center gap-2.5 w-[110px] min-h-[120px] p-5 max-md:p-3.5 bg-white border border-teal-pale-2 rounded-xl text-center transition-[transform,box-shadow,border-color] duration-200 hover:-translate-y-1 hover:border-teal-light hover:shadow-[0_10px_22px_rgba(0,128,128,0.14)] max-md:flex-[1_1_calc(50%-0.5rem)] max-md:w-auto max-md:min-h-[90px]">
+                            <i class="fa-solid fa-wrench text-teal-primary text-[2rem] max-md:text-[1.6rem]"></i>
+                            <span class="text-[0.8rem] max-md:text-[0.72rem] font-medium text-brand-black">Troubleshooting</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certification-sections" class="certifications-section max-w-[1200px] mx-auto py-20 px-8 max-md:py-12 max-md:px-5 border-y-[3px] border-teal-pale-2">
+            <h2 class="section-title text-base font-semibold tracking-[0.15em] uppercase text-teal-primary mb-10 font-heading">My Certificates &amp; Certifications</h2>
+
+            <div class="carousel relative w-full overflow-hidden" data-carousel>
+                <div class="carousel-track flex transition-transform duration-500 ease-in-out" data-carousel-track>
+
+                    <figure class="carousel-slide flex-[0_0_100%] grid grid-cols-1 md:grid-cols-[1.3fr_1fr] items-center gap-10 max-md:gap-5 bg-white border border-teal-pale-2 rounded-2xl min-h-[420px] max-md:min-h-0 p-10 max-md:p-6">
+                        <div class="carousel-img-block">
+                            <div class="w-full h-[360px] max-md:h-[220px] rounded-xl bg-teal-pale-2 flex items-center justify-center p-6 border border-teal-pale">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-award text-5xl text-teal-primary mb-3"></i>
+                                    <h5 class="text-lg font-bold text-teal-dark-2 font-heading">Front-End Development Specialization</h5>
+                                    <p class="text-sm text-teal-dark">Meta / Coursera Verified Certificate</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-text-block flex flex-col gap-3">
+                            <h4 class="carousel-title text-[1.4rem] max-md:text-[1.15rem] font-semibold text-brand-black font-heading">Front-End Development Specialization</h4>
+                            <p class="carousel-desc text-base leading-relaxed text-teal-dark-2">Comprehensive coursework covering HTML5, modern CSS architectures, JavaScript ES6+, UI design engineering, and responsive web principles.</p>
+                        </div>
+                    </figure>
+
+                    <figure class="carousel-slide flex-[0_0_100%] grid grid-cols-1 md:grid-cols-[1.3fr_1fr] items-center gap-10 max-md:gap-5 bg-white border border-teal-pale-2 rounded-2xl min-h-[420px] max-md:min-h-0 p-10 max-md:p-6">
+                        <div class="carousel-img-block">
+                            <div class="w-full h-[360px] max-md:h-[220px] rounded-xl bg-teal-pale-2 flex items-center justify-center p-6 border border-teal-pale">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-shield-halved text-5xl text-teal-primary mb-3"></i>
+                                    <h5 class="text-lg font-bold text-teal-dark-2 font-heading">Defensive Cybersecurity Foundations</h5>
+                                    <p class="text-sm text-teal-dark">Network &amp; Application Security</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-text-block flex flex-col gap-3">
+                            <h4 class="carousel-title text-[1.4rem] max-md:text-[1.15rem] font-semibold text-brand-black font-heading">Defensive Cybersecurity Foundations</h4>
+                            <p class="carousel-desc text-base leading-relaxed text-teal-dark-2">Practical study in threat mitigation, defensive system architectures, encryption protocols, and OWASP Top 10 web vulnerabilities.</p>
+                        </div>
+                    </figure>
+
+                    <figure class="carousel-slide flex-[0_0_100%] grid grid-cols-1 md:grid-cols-[1.3fr_1fr] items-center gap-10 max-md:gap-5 bg-white border border-teal-pale-2 rounded-2xl min-h-[420px] max-md:min-h-0 p-10 max-md:p-6">
+                        <div class="carousel-img-block">
+                            <div class="w-full h-[360px] max-md:h-[220px] rounded-xl bg-teal-pale-2 flex items-center justify-center p-6 border border-teal-pale">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-cloud text-5xl text-teal-primary mb-3"></i>
+                                    <h5 class="text-lg font-bold text-teal-dark-2 font-heading">Cloud Computing &amp; Systems</h5>
+                                    <p class="text-sm text-teal-dark">Infrastructure &amp; Serverless</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-text-block flex flex-col gap-3">
+                            <h4 class="carousel-title text-[1.4rem] max-md:text-[1.15rem] font-semibold text-brand-black font-heading">Cloud Computing &amp; Systems Architecture</h4>
+                            <p class="carousel-desc text-base leading-relaxed text-teal-dark-2">Understanding modern cloud architecture, containerized deployments, scalable serverless workloads, and API microservices.</p>
+                        </div>
+                    </figure>
+
+                    <figure class="carousel-slide flex-[0_0_100%] grid grid-cols-1 md:grid-cols-[1.3fr_1fr] items-center gap-10 max-md:gap-5 bg-white border border-teal-pale-2 rounded-2xl min-h-[420px] max-md:min-h-0 p-10 max-md:p-6">
+                        <div class="carousel-img-block">
+                            <div class="w-full h-[360px] max-md:h-[220px] rounded-xl bg-teal-pale-2 flex items-center justify-center p-6 border border-teal-pale">
+                                <div class="text-center">
+                                    <i class="fa-solid fa-robot text-5xl text-teal-primary mb-3"></i>
+                                    <h5 class="text-lg font-bold text-teal-dark-2 font-heading">AI Engineering Fundamentals</h5>
+                                    <p class="text-sm text-teal-dark">Machine Learning &amp; LLMs</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-text-block flex flex-col gap-3">
+                            <h4 class="carousel-title text-[1.4rem] max-md:text-[1.15rem] font-semibold text-brand-black font-heading">AI Engineering Fundamentals</h4>
+                            <p class="carousel-desc text-base leading-relaxed text-teal-dark-2">Exploration of generative AI integration, prompt engineering, multimodal APIs, and applied machine learning pipelines.</p>
+                        </div>
+                    </figure>
+
+                </div>
+
+                <button class="carousel-btn carousel-btn-prev absolute top-1/2 -translate-y-1/2 -left-1.5 max-md:left-1 w-11 h-11 max-md:w-9 max-md:h-9 rounded-full border-none bg-white text-teal-primary text-base max-md:text-sm flex items-center justify-center cursor-pointer shadow-[0_4px_14px_rgba(0,128,128,0.18)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-teal-pale-2 hover:-translate-y-1/2 hover:scale-[1.08] active:-translate-y-1/2 active:scale-95 active:shadow-[0_2px_8px_rgba(0,128,128,0.22)] z-10" data-carousel-prev aria-label="Previous certificate">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button class="carousel-btn carousel-btn-next absolute top-1/2 -translate-y-1/2 -right-1.5 max-md:right-1 w-11 h-11 max-md:w-9 max-md:h-9 rounded-full border-none bg-white text-teal-primary text-base max-md:text-sm flex items-center justify-center cursor-pointer shadow-[0_4px_14px_rgba(0,128,128,0.18)] transition-[background-color,transform,box-shadow] duration-200 hover:bg-teal-pale-2 hover:-translate-y-1/2 hover:scale-[1.08] active:-translate-y-1/2 active:scale-95 active:shadow-[0_2px_8px_rgba(0,128,128,0.22)] z-10" data-carousel-next aria-label="Next certificate">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <div class="carousel-dots flex justify-center gap-2.5 mt-7" data-carousel-dots>
+                    <button class="carousel-dot active w-2.5 h-2.5 rounded-full border-none bg-teal-pale-2 cursor-pointer p-0 transition-[background-color,transform] duration-200 hover:scale-[1.2]" data-slide-to="0" aria-label="Go to slide 1"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-teal-pale-2 cursor-pointer p-0 transition-[background-color,transform] duration-200 hover:scale-[1.2]" data-slide-to="1" aria-label="Go to slide 2"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-teal-pale-2 cursor-pointer p-0 transition-[background-color,transform] duration-200 hover:scale-[1.2]" data-slide-to="2" aria-label="Go to slide 3"></button>
+                    <button class="carousel-dot w-2.5 h-2.5 rounded-full border-none bg-teal-pale-2 cursor-pointer p-0 transition-[background-color,transform] duration-200 hover:scale-[1.2]" data-slide-to="3" aria-label="Go to slide 4"></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Story Section -->
+        <section id="story-section" class="story-section max-w-[1200px] mx-auto py-20 px-8 max-md:py-12 max-md:px-5">
+            <h2 class="section-title text-base font-semibold tracking-[0.15em] uppercase text-teal-primary mb-6 font-heading">My Story</h2>
+             
+            <div class="my-story grid grid-cols-1 md:grid-cols-[1.2fr_1fr] items-center gap-12 max-md:gap-8">
+                <div class="story-txt-block md:order-1 max-md:order-2">
+                    <p class="story-text text-[1.15rem] max-md:text-base leading-[1.8] text-brand-black text-justify mb-16 max-md:mb-8">
+                        My journey began with deep curiosity about how lines of code translate into intuitive, responsive digital realities. As a Computer Science undergraduate, I balance theoretical computer science with hands-on software development, exploring the intersection of modern front-end engineering, robust cloud architecture, and cybersecurity resilience. Every project is an opportunity to solve real human problems through code that is fast, accessible, and structured for scale.
+                    </p>
+                    <a class="resume-download inline-flex items-center gap-2 py-3 px-6 mb-12 bg-teal-primary text-white text-[0.9rem] font-semibold no-underline rounded-lg transition-[background-color,transform] duration-200 hover:bg-teal-dark hover:-translate-y-0.5 active:translate-y-0" href="https://drive.google.com/file/d/1luEuoMrkhj52sRX_AVK-dTwWcABnMqD9/preview" target="_blank" rel="noopener">
+                        <i class="fa-solid fa-file-arrow-down"></i>
+                        View My Resume
+                    </a>
+                </div>
+
+                <div class="story-img-block md:order-2 max-md:order-1 flex justify-center">
+                    <img src="images/MyPic~Seat.png" alt="My Picture" class="story-img w-full max-w-[420px] max-md:max-w-[280px] aspect-[4/5] object-cover rounded-2xl border-4 border-teal-pale-2 shadow-[0_12px_32px_rgba(0,128,128,0.16)]" />
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="contact-section py-24 px-8 max-md:py-12 max-md:px-5 bg-teal-dark-2 max-w-[1100px] mx-auto grid grid-cols-1 md:grid-cols-[1.1fr_0.9fr] items-start gap-12 max-md:gap-10 rounded-2xl">
+            <h2 class="section-title col-span-full text-center text-gold-light text-base font-semibold tracking-[0.15em] uppercase mb-12 font-heading">Contact Me</h2>
+
+            <form action="" onsubmit="event.preventDefault();" class="flex flex-col gap-6 p-11 max-md:p-7 bg-white rounded-[18px] shadow-[0_20px_50px_rgba(212,162,76,0.40)]">
+                <h3 class="form-title title-3 text-2xl font-bold text-brand-black mb-2 font-heading">Send Me A Mail</h3>
+
+                <label for="senderName" class="text-[0.85rem] font-semibold text-teal-dark-2 -mb-3">Your Full Name</label>
+                <input id="senderName" name="senderName" type="text" placeholder="FirstName MiddleName, LastName" class="w-full py-3.5 px-4 text-[0.95rem] text-brand-black bg-white border-[1.5px] border-teal-pale-2 rounded-lg transition-[border-color,box-shadow] duration-200 placeholder:text-teal-light placeholder:opacity-70 focus:outline-none focus:border-teal-primary focus:ring-4 focus:ring-teal-primary/20" />
+
+                <label for="senderEmail" class="text-[0.85rem] font-semibold text-teal-dark-2 -mb-3">Your Email</label>
+                <input id="senderEmail" name="senderEmail" type="email" placeholder="johndoe@gmail.com" class="w-full py-3.5 px-4 text-[0.95rem] text-brand-black bg-white border-[1.5px] border-teal-pale-2 rounded-lg transition-[border-color,box-shadow] duration-200 placeholder:text-teal-light placeholder:opacity-70 focus:outline-none focus:border-teal-primary focus:ring-4 focus:ring-teal-primary/20" />
+
+                <label for="senderMessage" class="text-[0.85rem] font-semibold text-teal-dark-2 -mb-3">Your Message</label>
+                <textarea id="senderMessage" name="senderMessage" placeholder="Hi Chiemerie, so I was thinking....." class="w-full py-3.5 px-4 text-[0.95rem] text-brand-black bg-white border-[1.5px] border-teal-pale-2 rounded-lg transition-[border-color,box-shadow] duration-200 placeholder:text-teal-light placeholder:opacity-70 focus:outline-none focus:border-teal-primary focus:ring-4 focus:ring-teal-primary/20 resize-y min-h-[130px]"></textarea>
+
+                <button type="submit" class="w-full py-4 px-10 mt-2 bg-gold-accent text-teal-dark-2 text-base font-bold border-none rounded-lg cursor-pointer text-center transition-[background-color,transform,box-shadow] duration-200 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(212,162,76,0.35)] active:translate-y-0">Submit</button>
+            </form>
+
+            <div class="connect pt-4 max-md:pt-0">
+                <h3 class="connect-title title-3 text-[1.3rem] font-bold text-white mb-6 font-heading">Or connect with me</h3>
+                <div class="flexbox flex flex-wrap gap-4 max-md:grid max-md:grid-cols-3 max-md:gap-3">
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://github.com/Chi7Frank" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="devicon-github-original social-icon text-[1.1rem] text-gold-light"></i>
+                            Github
+                        </span>
+                    </a>
+                   
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://www.linkedin.com/in/chiemerie-obinwa-5a06231b8" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="devicon-linkedin-plain social-icon text-[1.1rem] text-gold-light"></i>
+                            LinkedIn
+                        </span>    
+                    </a>
+
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://x.com/Alpha_MBird" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="devicon-twitter-original social-icon text-[1.1rem] text-gold-light"></i>
+                            Twitter(X)
+                        </span>
+                    </a>
+                    
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://www.facebook.com/share/1DSJQTE9N5/" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="devicon-facebook-plain social-icon text-[1.1rem] text-gold-light"></i>
+                            Facebook
+                        </span>  
+                    </a>
+                    
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://wa.me/2349167748639" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="fa-brands fa-whatsapp social-icon text-[1.1rem] text-gold-light"></i>
+                            WhatsApp
+                        </span>
+                    </a>
+                    
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://discord.com/users/1435365435720601660" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="fa-brands fa-discord social-icon text-[1.1rem] text-gold-light"></i>
+                            Discord
+                        </span>
+                    </a>                     
+                    
+                    <a class="social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200" href="https://substack.com/@alphamockingbird" target="_blank" rel="noopener">
+                        <span class="flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0">
+                            <i class="si si-substack social-icon text-[1.1rem] text-gold-light"></i>
+                            SubStack
+                        </span>
+                    </a> 
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Popups for Projects -->
+    <aside>
+        <!-- Backdrop dims the page behind the popup -->
+        <div class="popup-backdrop fixed inset-0 z-[1900] bg-brand-black/65 backdrop-blur-[2px] none" data-popup-backdrop></div>
+
+        <!-- Web Dev Popup -->
+        <div class="pop-up fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2000] w-[90%] max-w-[960px] max-h-[85vh] max-md:max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-12 max-md:py-7 max-md:px-5 bg-white rounded-[20px] shadow-[0_30px_70px_rgba(0,0,0,0.35)] none web-dev" data-popup>
+            <button class="popup-close sticky top-0 ml-auto w-10 h-10 rounded-full border-none flex items-center justify-center bg-teal-pale-2 text-teal-dark-2 text-[1.1rem] cursor-pointer col-span-full justify-self-end transition-[background-color,color,transform] duration-200 hover:bg-teal-primary hover:text-white hover:rotate-90 z-10" data-popup-close aria-label="Close project details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="project flex flex-col p-6 bg-white border border-teal-pale-2 rounded-[14px]">
+                <img src="images/webdev.png" alt="Campus Cent" class="project-img w-full h-[180px] object-cover rounded-[10px] mb-4 bg-teal-pale-2" />
+                <h3 class="project-title title-3 text-[1.15rem] font-semibold text-brand-black mb-2 font-heading">Campus Cent</h3>
+                <p class="project-desc text-[0.9rem] leading-[1.55] text-teal-dark-2 mb-5">
+                    Campus Cent is an Advanced LifeStyle Budgeter Application made exclusively for students in Nigerian university communities. It makes use of well trained models to check student fiscal capacity against predicted market prices and helps students make the right financial decision.
+                </p>
+                <a href="https://github.com/Chi7Frank" target="_blank" rel="noopener" class="project-link mt-auto self-start text-[0.9rem] font-semibold text-teal-primary no-underline transition-colors duration-200 hover:text-teal-dark">Check it Out &rarr;</a>
+            </div>
+
+            <div class="project flex flex-col p-6 bg-white border border-teal-pale-2 rounded-[14px]">
+                <img src="images/webdev.png" alt="Portfolio Web App" class="project-img w-full h-[180px] object-cover rounded-[10px] mb-4 bg-teal-pale-2" />
+                <h3 class="project-title title-3 text-[1.15rem] font-semibold text-brand-black mb-2 font-heading">Personal Portfolio</h3>
+                <p class="project-desc text-[0.9rem] leading-[1.55] text-teal-dark-2 mb-5">
+                    A responsive, component-structured portfolio application refactored with Tailwind CSS, featuring an interactive certificate carousel, popup project showcase, and dynamic contact workflows.
+                </p>
+                <a href="#hero-section" class="project-link mt-auto self-start text-[0.9rem] font-semibold text-teal-primary no-underline transition-colors duration-200 hover:text-teal-dark">Check it Out &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Graphic Design Popup -->
+        <div class="pop-up fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2000] w-[90%] max-w-[960px] max-h-[85vh] max-md:max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-12 max-md:py-7 max-md:px-5 bg-white rounded-[20px] shadow-[0_30px_70px_rgba(0,0,0,0.35)] none graphics-design" data-popup>
+            <button class="popup-close sticky top-0 ml-auto w-10 h-10 rounded-full border-none flex items-center justify-center bg-teal-pale-2 text-teal-dark-2 text-[1.1rem] cursor-pointer col-span-full justify-self-end transition-[background-color,color,transform] duration-200 hover:bg-teal-primary hover:text-white hover:rotate-90 z-10" data-popup-close aria-label="Close project details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="project flex flex-col p-6 bg-white border border-teal-pale-2 rounded-[14px]">
+                <img src="images/graphics.png" alt="Brand Identity" class="project-img w-full h-[180px] object-cover rounded-[10px] mb-4 bg-teal-pale-2" />
+                <h3 class="project-title title-3 text-[1.15rem] font-semibold text-brand-black mb-2 font-heading">Brand Identity &amp; Systems</h3>
+                <p class="project-desc text-[0.9rem] leading-[1.55] text-teal-dark-2 mb-5">
+                    Comprehensive visual brand guidelines, typography hierarchies, logo design systems, and color palettes developed for student-led initiatives and tech community groups.
+                </p>
+                <a href="https://github.com/Chi7Frank" target="_blank" rel="noopener" class="project-link mt-auto self-start text-[0.9rem] font-semibold text-teal-primary no-underline transition-colors duration-200 hover:text-teal-dark">Check it Out &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Research Articles Popup -->
+        <div class="pop-up fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2000] w-[90%] max-w-[960px] max-h-[85vh] max-md:max-h-[90vh] overflow-y-auto grid grid-cols-1 md:grid-cols-2 gap-6 p-12 max-md:py-7 max-md:px-5 bg-white rounded-[20px] shadow-[0_30px_70px_rgba(0,0,0,0.35)] none research-articles" data-popup>
+            <button class="popup-close sticky top-0 ml-auto w-10 h-10 rounded-full border-none flex items-center justify-center bg-teal-pale-2 text-teal-dark-2 text-[1.1rem] cursor-pointer col-span-full justify-self-end transition-[background-color,color,transform] duration-200 hover:bg-teal-primary hover:text-white hover:rotate-90 z-10" data-popup-close aria-label="Close project details">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="project flex flex-col p-6 bg-white border border-teal-pale-2 rounded-[14px]">
+                <img src="images/articles.png" alt="Research Article" class="project-img w-full h-[180px] object-cover rounded-[10px] mb-4 bg-teal-pale-2" />
+                <h3 class="project-title title-3 text-[1.15rem] font-semibold text-brand-black mb-2 font-heading">Defensive Cybersecurity in Cloud Microservices</h3>
+                <p class="project-desc text-[0.9rem] leading-[1.55] text-teal-dark-2 mb-5">
+                    Investigative paper examining proactive anomaly detection, zero-trust architectures, and cryptographic defenses in distributed containerized environments.
+                </p>
+                <a href="https://substack.com/@alphamockingbird" target="_blank" rel="noopener" class="project-link mt-auto self-start text-[0.9rem] font-semibold text-teal-primary no-underline transition-colors duration-200 hover:text-teal-dark">Read on Substack &rarr;</a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer class="flex max-md:flex-col items-center justify-between gap-3 max-md:text-center py-8 px-8 max-md:p-6 max-w-[1200px] mx-auto bg-teal-dark text-teal-pale-2 text-[0.85rem]">
+        <p>&copy; 2026 Chiemerie Obinwa. All rights reserved.</p>
+        <a href="#" class="text-gold-light no-underline font-medium hover:text-gold-accent transition-colors duration-200">Back to top &uarr;</a>
+    </footer>
+
+    <!-- Applet Mount Point & React Module Loader for Dev Server -->
+    <div id="root" class="hidden"></div>
+    <script type="module" src="/src/main.tsx"></script>
+</body>
+</html>
