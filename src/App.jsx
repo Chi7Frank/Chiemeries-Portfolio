@@ -1,7 +1,9 @@
 // import { useState } from 'react'
 import './App.css'
+import Footer from './components/Footer'
 import Header from './components/Header'
 import Skills from './components/Skills'
+import Story from './components/Story'
 
 function App() {
 
@@ -9,6 +11,8 @@ function App() {
     <>
     <Header/>
     <Skills/>
+    <Story/>
+    <Footer/>
     </>
   )
 }

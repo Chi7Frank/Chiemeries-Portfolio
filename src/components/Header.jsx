@@ -40,7 +40,6 @@ const Header = () =>{
 
     useEffect(() => {
     const handleResize = () => {
-        // If the screen gets wide (desktop size) and the menu is open, close it
         if (window.innerWidth > 768 && isOpen) {
             setIsOpen(false);
         }
