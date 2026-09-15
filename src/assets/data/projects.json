@@ -1,0 +1,20 @@
+[
+  {
+    "id": "web-dev",
+    "title": "Web-Development",
+    "img": "images/webdev.png",
+    "role": "As a Front-End Web Developer, my roles in these projects includes but are not limited to",
+    "icon": "fa-regular fa-circle-check",
+    "list": [
+      "Design Translation",
+      "Ensuring Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Testing and Debugging"
+    ],
+    "hint": {
+      "icon": "fa-regular fa-lightbulb",
+      "message": "Tap Card to view more"
+    }
+  }
+]

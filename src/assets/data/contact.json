@@ -1,0 +1,58 @@
+[
+    {
+        "title": "GitHub",
+        "href":"https://github.com/Chi7Frank",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "devicon-github-original",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "LinkedIn",
+        "href":"https://www.linkedin.com/in/chiemerie-obinwa-5a06231b8",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "devicon-linkedin-plain",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "Twitter(X)",
+        "href":"https://x.com/Alpha_MBird",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "devicon-twitter-original",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "Facebook",
+        "href":"https://www.facebook.com/share/1DSJQTE9N5/",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "devicon-facebook-plain",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "WhatsApp",
+        "href":"https://wa.me/2349167748639",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "fa-brands fa-whatsapp",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "Discord",
+        "href":"https://discord.com/users/1435365435720601660",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "fa-brands fa-discord",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    },
+    {
+        "title": "SubStack",
+        "href":"https://substack.com/@alphamockingbird",
+        "anchorClass": "social-link no-underline text-gold-light hover:text-gold-accent transition-colors duration-200",
+        "span": "flex-object flex items-center gap-2.5 py-3 px-4.5 bg-white/[0.06] border border-white/15 rounded-[10px] text-white text-[0.9rem] font-medium transition-[background-color,border-color,transform] duration-200 hover:bg-gold-accent/15 hover:border-gold-accent hover:-translate-y-0.5 max-md:flex-col max-md:justify-center max-md:text-center max-md:py-5 max-md:px-2 max-md:w-full max-md:min-h-0",
+        "icon": "si si-substack",
+        "general": "social-icon text-[1.1rem] text-gold-light"
+    }
+]
