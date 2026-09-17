@@ -1,10 +1,10 @@
 [
   {
     "id": "web-dev",
-    "title": "Web-Development",
-    "img": "images/webdev.png",
+    "title": "Web Development",
+    "img": "webdev.png",
     "role": "As a Front-End Web Developer, my roles in these projects includes but are not limited to",
-    "icon": "fa-regular fa-circle-check",
+    "icon": "fa-regular fa-circle-check text-teal-primary text-[0.95rem]",
     "list": [
       "Design Translation",
       "Ensuring Responsiveness",
@@ -13,7 +13,44 @@
       "Testing and Debugging"
     ],
     "hint": {
-      "icon": "fa-regular fa-lightbulb",
+      "icon": "fa-regular fa-lightbulb text-gold-light text-[0.95rem]",
+      "message": "Tap Card to view more"
+    }
+  },
+  {
+    "id": "graphics-design",
+    "title": "Graphic Design",
+    "img": "graphics.png",
+    "role": "As a Graphic Designer, my roles in these projects includes but are not limited to",
+    "icon": "fa-regular fa-circle-check text-teal-primary text-[0.95rem]",
+    "list": [
+      "Conceptualization",
+      "Colour Palette Creation",
+      "Brand Identity Creation",
+      "Social Media Designs",
+      "Communication through Design"
+    ],
+    "hint": {
+      "icon": "fa-regular fa-lightbulb text-gold-light text-[0.95rem]",
+      "message": "Tap Card to view more"
+    }
+  },
+
+  {
+    "id": "research-articles",
+    "title": "Research Articles",
+    "img": "articles.png",
+    "role": "As a Computer Scholar, my roles in these projects includes but are not limited to",
+    "icon": "fa-regular fa-circle-check text-teal-primary text-[0.95rem]",
+    "list": [
+      "Problem Finding",
+      "Intense Investigations",
+      "Structuring Drafts",
+      "Source Citing",
+      "Addressing Feedback"
+    ],
+    "hint": {
+      "icon": "fa-regular fa-lightbulb text-gold-light text-[0.95rem]",
       "message": "Tap Card to view more"
     }
   }

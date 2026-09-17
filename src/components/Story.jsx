@@ -1,4 +1,4 @@
-import storyImg from "../assets/images/profile/storyImg.png"
+import seatImg from "../assets/images/profile/seatImg.png"
 
 const Paragraph = ({children}) =>{
     return(
@@ -42,7 +42,7 @@ const Story = ()=>{
                 </div>
 
                 <div className="story-img-block md:order-2 max-md:order-1 flex justify-center">
-                    <img src={storyImg} alt="My Picture" className="story-img w-full max-w-[420px] max-md:max-w-[280px] aspect-[4/5] object-cover rounded-2xl border-4 border-teal-pale-2 shadow-[0_12px_32px_rgba(0,128,128,0.16)]" />
+                    <img src={seatImg} alt="My Picture" className="story-img w-full max-w-[420px] max-md:max-w-[280px] aspect-[4/5] object-cover rounded-2xl border-4 border-teal-pale-2 shadow-[0_12px_32px_rgba(0,128,128,0.16)]" />
                 </div>
             </div>
         </section>
