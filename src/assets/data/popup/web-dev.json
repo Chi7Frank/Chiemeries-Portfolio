@@ -3,21 +3,7 @@
             "id": "personalportfolio",
             "img": "portfolio.png",
             "title": "Personal Portfolio",
-            "link": "url",
-            "desc": "paragraph"
-    },
-    {
-            "id": "personalportfolio",
-            "img": "portfolio.png",
-            "title": "Personal Portfolio",
-            "link": "url",
-            "desc": "paragraph"
-    },
-    {
-            "id": "personalportfolio",
-            "img": "portfolio.png",
-            "title": "Personal Portfolio",
-            "link": "url",
-            "desc": "paragraph"
+            "link": "#",
+            "desc": "A modern responsive portfolie webpage, design with the use of react + tailwind."
     }
 ]
