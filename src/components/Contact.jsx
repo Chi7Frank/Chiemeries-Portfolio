@@ -65,6 +65,9 @@ const ContactForm = () => {
                 > 
                 </textarea>
 
+                {/* Spambot handler */}
+                <input type="checkbox" name="botcheck" className="hidden" style={{ display: "none" }} />
+
                 <button 
                 type="submit" 
                 className="w-full py-4 px-10 mt-2 bg-gold-accent text-teal-dark-2 text-base font-bold border-none rounded-lg cursor-pointer text-center transition-[background-color,transform,box-shadow] duration-200 hover:bg-gold-light hover:-translate-y-0.5 hover:shadow-[0_10px_24px_rgba(212,162,76,0.35)] active:translate-y-0"
